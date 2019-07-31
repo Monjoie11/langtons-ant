@@ -6,6 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import edu.cnm.deepdive.langton.view.TerrainView?>
 <GridPane xmlns="http://javafx.com/javafx"
   xmlns:fx="http://javafx.com/fxml"
   fx:controller="edu.cnm.deepdive.langton.controller.MainController"
@@ -35,6 +36,16 @@
     GridPane.halignment="CENTER"
     GridPane.valignment="CENTER"
     value="1"/>
+
+  <TerrainView
+    fx:id="terrainView"
+    GridPane.rowIndex="0"
+    GridPane.columnIndex="0"
+    GridPane.columnSpan="3"
+    GridPane.halignment="CENTER"
+    GridPane.valignment="CENTER"
+    width="600"
+    height="600"/>
 
   <ToggleButton
     fx:id="runToggle"

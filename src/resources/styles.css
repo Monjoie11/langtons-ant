@@ -1,0 +1,13 @@
+GridPane {
+  -fx-padding: 10px;
+  -fx-hgap: 5px;
+  -fx-vgap: 5px;
+}
+
+TerrainView{
+  -fx-background-color: black;
+  -fx-min-width: 600px;
+  -fx-pref-width: 600px;
+  -fx-min-height: 600px;
+  -fx-pref-height: 600px;
+}
