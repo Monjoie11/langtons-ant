@@ -16,5 +16,5 @@ public class MainController {
   @FXML
   private void toggleRun(ActionEvent actionEvent) {
   }
-  
+
 }
