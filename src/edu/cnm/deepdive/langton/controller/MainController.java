@@ -30,7 +30,7 @@ public class MainController {
 
   @FXML
   private void initialize(){
-   terrain = new Terrain(2, new Random());
+   terrain = new Terrain((int) populationSize.getValue(), new Random());
    timer = new AnimationTimer() {
      @Override
      public void handle(long now) {
