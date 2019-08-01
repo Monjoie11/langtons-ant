@@ -4,10 +4,23 @@ GridPane {
   -fx-vgap: 5px;
 }
 
-TerrainView{
+Pane#frame {
   -fx-background-color: black;
   -fx-min-width: 600px;
   -fx-pref-width: 600px;
   -fx-min-height: 600px;
   -fx-pref-height: 600px;
+}
+
+.button{
+  -fx-pref-width: 100px;
+  -fx-font-weight: bold;
+}
+
+Slider{
+  -fx-pref-width: 120px;
+}
+
+Label{
+  -fx-font-weight: bold;
 }

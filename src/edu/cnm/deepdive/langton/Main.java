@@ -35,6 +35,7 @@ public class Main extends Application {
     //TODO Set other elements of the scene from our resources
     stage.setResizable(false);
     stage.setScene(scene);
+    stage.sizeToScene();
     stage.show();
   }
 

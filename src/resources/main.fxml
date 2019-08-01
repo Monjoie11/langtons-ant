@@ -14,13 +14,35 @@
 
   <columnConstraints>
     <ColumnConstraints
-      percentWidth="33.3"/>
+      percentWidth="25"/>
     <ColumnConstraints
-      percentWidth="33.4"/>
+      percentWidth="25"/>
+    <ColumnConstraints
+      percentWidth="25"/>
   </columnConstraints>
 
-<!--  TODO Include element for custom view.-->
+  <Pane
+    id="frame"
+    GridPane.rowIndex="0"
+    GridPane.columnIndex="0"
+    GridPane.columnSpan="4"
+    GridPane.halignment="CENTER"
+    GridPane.valignment="CENTER">
 
+    <TerrainView
+      fx:id="terrainView"
+      width="600"
+      height="600"/>
+
+  </Pane>
+  <Label
+    id="populationSizeLabel"
+    labelFor="$populationSize"
+    GridPane.halignment="LEFT"
+    GridPane.valignment="CENTER"
+    GridPane.rowIndex="1"
+    GridPane.columnIndex="0"
+    text="%populationlabel"/>
   <Slider
     fx:id="populationSize"
     min="1"
@@ -48,37 +70,41 @@
     showTickLabels="false"
     blockIncrement="1"
     GridPane.rowIndex="1"
-    GridPane.columnIndex="3"
+    GridPane.columnIndex="1"
     GridPane.halignment="CENTER"
     GridPane.valignment="CENTER"
     value="1"/>
 
-  <TerrainView
-    fx:id="terrainView"
-    GridPane.rowIndex="0"
-    GridPane.columnIndex="0"
-    GridPane.columnSpan="3"
-    GridPane.halignment="CENTER"
-    GridPane.valignment="CENTER"
-    width="600"
-    height="600"/>
+<!--  <TerrainView-->
+<!--    fx:id="terrainView"-->
+<!--    GridPane.rowIndex="0"-->
+<!--    GridPane.columnIndex="0"-->
+<!--    GridPane.columnSpan="3"-->
+<!--    GridPane.halignment="CENTER"-->
+<!--    GridPane.valignment="CENTER"-->
+<!--    width="600"-->
+<!--    height="600"/>-->
 
   <ToggleButton
     fx:id="runToggle"
     GridPane.rowIndex="1"
-    GridPane.columnIndex="1"
+    GridPane.columnIndex="2"
     GridPane.valignment="TOP"
     GridPane.halignment="LEFT"
     text="%start_text"
-  onAction="#toggleRun"/>
+  onAction="#toggleRun"
+  styleClass="button"/>
 
-  <ToggleButton
+  <Button
     fx:id="resetButton"
     GridPane.rowIndex="1"
-    GridPane.columnIndex="1"
+    GridPane.columnIndex="3"
     GridPane.valignment="TOP"
     GridPane.halignment="RIGHT"
     text="%reset_text"
-    onAction="#reset"/>
+    onAction="#reset"
+  styleClass="button"/>
+
+
 
 </GridPane>
