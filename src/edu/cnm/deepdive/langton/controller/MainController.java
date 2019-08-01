@@ -22,6 +22,9 @@ public class MainController {
   @FXML
   private Slider populationSize;
 
+  @FXML
+  private Slider antAmphetamineLevel;
+
   private boolean running;
 
   private Terrain terrain;
@@ -71,7 +74,7 @@ public class MainController {
       while (running){
         terrain.tick();
         try {
-          Thread.sleep(1);
+          Thread.sleep(100 - (int)antAmphetamineLevel.getValue());
         } catch (InterruptedException e) {
           //Do nothing
         }
