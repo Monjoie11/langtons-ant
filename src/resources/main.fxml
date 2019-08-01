@@ -51,9 +51,18 @@
     fx:id="runToggle"
     GridPane.rowIndex="1"
     GridPane.columnIndex="1"
-    GridPane.valignment="CENTER"
-    GridPane.halignment="CENTER"
+    GridPane.valignment="TOP"
+    GridPane.halignment="LEFT"
     text="%start_text"
   onAction="#toggleRun"/>
+
+  <ToggleButton
+    fx:id="resetButton"
+    GridPane.rowIndex="1"
+    GridPane.columnIndex="1"
+    GridPane.valignment="TOP"
+    GridPane.halignment="RIGHT"
+    text="%reset_text"
+    onAction="#reset"/>
 
 </GridPane>

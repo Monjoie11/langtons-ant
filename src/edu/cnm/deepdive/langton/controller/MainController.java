@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.langton.controller;
 
+import edu.cnm.deepdive.langton.Main;
 import edu.cnm.deepdive.langton.model.Terrain;
 import edu.cnm.deepdive.langton.view.TerrainView;
 import java.util.Random;
@@ -29,7 +30,7 @@ public class MainController {
 
   @FXML
   private void initialize(){
-   terrain = new Terrain(5, new Random());
+   terrain = new Terrain(2, new Random());
    timer = new AnimationTimer() {
      @Override
      public void handle(long now) {
@@ -78,5 +79,14 @@ public class MainController {
       Platform.runLater(() -> runToggle.setDisable(false));
     }
   }
+
+  public void reset(ActionEvent actionEvent){
+    //TODO fix run toggle
+    toggleRun(actionEvent);
+    stop();
+    initialize();
+    start();
+  }
+
 
 }
